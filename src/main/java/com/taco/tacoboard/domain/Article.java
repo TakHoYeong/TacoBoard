@@ -3,6 +3,10 @@ package com.taco.tacoboard.domain;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -26,8 +30,8 @@ public class Article {
     @Setter private String content;
     @Setter private String hashtag;
 
-    private LocalDateTime createdAt;
-    private String createdBy;
-    private LocalDateTime modifiedAt;
-    private String modifiedBy;
+    @CreatedDate private LocalDateTime createdAt;
+    @CreatedBy private String createdBy;
+    @LastModifiedDate private LocalDateTime modifiedAt;
+    @LastModifiedBy private String modifiedBy;
 }

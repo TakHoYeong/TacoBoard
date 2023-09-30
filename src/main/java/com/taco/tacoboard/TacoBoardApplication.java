@@ -1,13 +1,13 @@
-package com.taco.tacoblog2;
+package com.taco.tacoboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TacoBlog2Application {
+public class TacoBoardApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TacoBlog2Application.class, args);
+        SpringApplication.run(TacoBoardApplication.class, args);
     }
 
 }

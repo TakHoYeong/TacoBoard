@@ -1,6 +1,7 @@
 package com.taco.tacoboard.domain;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
@@ -21,9 +22,9 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
-    private String content;
-    private String hashtag;
+    @Setter private String title;
+    @Setter private String content;
+    @Setter private String hashtag;
 
     private LocalDateTime createdAt;
     private String createdBy;

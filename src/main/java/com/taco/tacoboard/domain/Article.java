@@ -35,4 +35,18 @@ public class Article {
     @LastModifiedDate @Column(nullable = false) private LocalDateTime modifiedAt; // 수정일자
     @LastModifiedBy @Column(nullable = false, length = 100) private String modifiedBy; // 수정자
 
+    protected Article() {}
+
+    private Article(String title, String content, String hashtag) {
+        this.title = title;
+        this.content = content;
+        this.hashtag = hashtag;
+    }
+
+    public static Article of(String title, String content, String hashtag) {
+        return new Article(title, content, hashtag);
+    }
+
+
+
 }

@@ -27,9 +27,9 @@ public class ArticleComment {
     private Long id;
 
     @Setter @ManyToOne(optional = false)
-    private Article article;
+    private Article article; // 게시글
     @Setter @Column(nullable = false, length = 2000)
-    private String content;
+    private String content; // 댓글내용
 
     @CreatedDate @Column(nullable = false)
     private LocalDateTime createdAt; // 생성일자

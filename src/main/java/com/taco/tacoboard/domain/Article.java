@@ -10,7 +10,9 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Getter
 @ToString
@@ -33,6 +35,11 @@ public class Article {
     private String content; // 본문
     @Setter
     private String hashtag; // 해시태그
+
+    @ToString.Exclude // 순환참조문제 발생 때문에 여기서 ToString을 끊어준다
+    @OrderBy("id")
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
+    private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 
     @CreatedDate @Column(nullable = false)
     private LocalDateTime createdAt; // 생성일자

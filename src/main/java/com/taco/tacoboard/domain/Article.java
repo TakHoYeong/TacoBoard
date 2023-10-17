@@ -58,6 +58,7 @@ public class Article {
         this.hashtag = hashtag;
     }
 
+    // of: 해당 클래스에 생성자를 만들겠다
     public static Article of(String title, String content, String hashtag) {
         return new Article(title, content, hashtag);
     }

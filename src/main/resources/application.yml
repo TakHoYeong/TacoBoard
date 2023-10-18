@@ -15,13 +15,12 @@ spring:
     password: 1234
   jpa:
     defer-datasource-initialization: true
-    hibernate.ddl-auto: create
+    hibernate.ddl-auto: create-drop
     show-sql: true
     properties:
       hibernate:
         format_sql: true
         default_batch_fetch_size: 100
-  h2.console.enabled: false
   sql.init.mode: always
 
 

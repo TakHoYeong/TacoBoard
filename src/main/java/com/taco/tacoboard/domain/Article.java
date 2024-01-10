@@ -41,15 +41,6 @@ public class Article extends AuditingFields{
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 
-    @CreatedDate @Column(nullable = false)
-    private LocalDateTime createdAt; // 생성일자
-    @CreatedBy @Column(nullable = false, length = 100)
-    private String createdBy; // 생성자
-    @LastModifiedDate @Column(nullable = false)
-    private LocalDateTime modifiedAt; // 수정일자
-    @LastModifiedBy @Column(nullable = false, length = 100)
-    private String modifiedBy; // 수정자
-
     protected Article() {}
 
     private Article(String title, String content, String hashtag) {

@@ -47,8 +47,7 @@ public class DataRestTest {
         // When & Then
         mvc.perform(get("/api/articles/1"))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")))
-                .andDo(print());
+                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
     }
 
     @DisplayName("[api] 게시글 -> 댓글 리스트 조회")
@@ -59,8 +58,7 @@ public class DataRestTest {
         // When & Then
         mvc.perform(get("/api/articles/1/articleComments"))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")))
-                .andDo(print());
+                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
     }
 
     @DisplayName("[api] 댓글 리스트 조회")
@@ -71,8 +69,7 @@ public class DataRestTest {
         // When & Then
         mvc.perform(get("/api/articleComments"))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")))
-                .andDo(print());
+                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
     }
 
     @DisplayName("[api] 댓글 단건 조회")
@@ -83,8 +80,7 @@ public class DataRestTest {
         // When & Then
         mvc.perform(get("/api/articleComments/1"))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")))
-                .andDo(print());
+                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
     }
 
 }

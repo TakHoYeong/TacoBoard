@@ -1,5 +1,6 @@
 package com.taco.tacoboard.controller;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -12,6 +13,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@DisplayName("Data REST - API 테스트")
 @AutoConfigureMockMvc
 @SpringBootTest
 public class DataRestTest {
@@ -22,8 +24,9 @@ public class DataRestTest {
         this.mvc = mvc;
     }
 
+    @DisplayName("[api] 게시글 리스트 조회")
     @Test
-    void test() throws Exception{
+    void givenNothing_whenRequestingArticles_thenReturnsArticlesJsonResponse() throws Exception{
         // Given
 
         // When & Then

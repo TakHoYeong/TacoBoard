@@ -39,4 +39,18 @@ public class DataRestTest {
                 .andDo(print());
     }
 
+    @DisplayName("[api] 게시글 단건 조회")
+    @Test
+    void givenNothing_whenRequestingArticle_thenReturnsArticlesJsonResponse() throws Exception{
+        // Given
+
+        // When & Then
+        mvc.perform(get("/api/articles/1"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.valueOf("application/hal+json")))
+                .andDo(print());
+    }
+
+
+
 }

@@ -61,3 +61,8 @@ tasks.withType(JavaCompile){
 sourceSets {
     main.java.srcDirs += [generated]
 }
+
+// gradle clean 시 QClass 디렉토리 삭제
+clean{
+    delete file(generated)
+}

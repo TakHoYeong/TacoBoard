@@ -31,4 +31,3 @@ public class Article {
     private LocalDateTime modifiedAt;
     private String modifiedBy;
 }
-

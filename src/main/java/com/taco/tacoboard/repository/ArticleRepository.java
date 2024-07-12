@@ -9,9 +9,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
 public interface ArticleRepository extends JpaRepository<Article, Long>,
-        QuerydslPredicateExecutor<Article>,
-        QuerydslBinderCustomizer<QArticle>
-{
-
+        QuerydslPredicateExecutor<Article>, QuerydslBinderCustomizer<QArticle> {
 
 }
